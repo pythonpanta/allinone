@@ -1,0 +1,14 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% block content %}
+<div class="home">
+    <h1>Face Based Attandance System</h1>
+<div class="container-fluid ">
+  <a href="{% url  'Attandance_IN' %}" class="mybtn mt-5 mx-5">Take Attandance IN </a>
+  <a href="{% url  'Attandance_OUT' %}" class="mybtn mt-5 mx-5">Take Attandance OUT</a>
+  <a href="{% url  'Login' %}" class="mybtn mt-5 mx-5">Log-in</a>
+</div>
+  </div>
+
+
+{% endblock content %}

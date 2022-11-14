@@ -1,0 +1,46 @@
+.footer{
+    padding: 30px 10px 40px 10px;
+    background: #111123;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+   
+    
+}
+.footer p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 20px 0;
+    
+}
+.footerc{
+    display: flex;
+    flex-direction: column;
+}
+.footer-right input{
+    width: 200px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+font-size: 14.9px;
+}
+.footer-right button{
+    width: 50px;
+    padding: 6px;
+    background: orangered;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.footer-right p{
+    margin-top: -80px;
+}
+@media only screen and (max-width: 480px) {
+    .footer-right p{
+        margin-top: 20px;
+    }
+}

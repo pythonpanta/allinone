@@ -1,0 +1,93 @@
+{% extends 'base.htm'%}
+{% block title%}Home.com{% endblock%}
+{% block home%}active{% endblock%}
+{% block body%}
+{% load static %}
+<div class="container-fluid  px-0">
+  <div class="header">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="10000">
+          <img src="{% static '3.jpg '%}" class="d-block w-100" alt="..." height="550px" width="800px">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-danger">Knowledge is key to success.</h2>
+            <h5 class="text-warning">Knowledge is the quantity that define the respect, man would earn.</h5>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{% static '2.jpg '%}" class="d-block w-100" alt="..." height="550px" width="700px">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-danger"> Try To Learn EveryThings.</h2>
+            <h5 class="text-warning">The more you learn , more you gain. </h5>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{% static '4.jpg '%}" class="d-block w-100" alt="..." height="550px" width="700px">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-danger">Book is My Best Friends</h2>
+            <h5 class="text-warning">Make more number of book than the number of friends .</h5>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="jumbotron my-1 px-5">
+    <h1 class="display-4">WelCome To Amrit Blog</h1>
+    <p class="lead">Hello, To every one. This is the blog where you will get all the information related to the science,
+      fashion,technology,politices and many more as the time goes.
+      <b>We as a group all want to learn the new skill and knowledge, so this is the best place to learn</b>
+    </p>
+    <hr class="my-4">
+    <p>Read all our's blog and Don't forget to send the feedback so that our team could improved and give you the best
+      content.</p>
+    <a class="btn btn-primary btn-lg" href="/blog" role="button">Learn more</a>
+  </div>
+  <h4 class="display-4 text-success text-center my-2">Most Popular Blog</h4>
+  <div class="row">
+    
+    <div class="col-sm-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="d-inline-block mb-2 text-primary">{{allpost.0.title}}</h3>
+          <p class="mb-0 text-muted">Author:{{allpost.0.author}}</p>
+          <div class="mb-1 text-muted">{{allpost.0.timestamp}}</div>
+          <p class="card-text mb-auto">{{allpost.0.content|truncatechars:300}}
+          </p>
+          <a href="/blog" class="stretched-link">Continue reading</a>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="col-sm-6 ">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="d-inline-block mb-2 text-primary">{{allpost.6.title}}</h3>
+          <p class="mb-0 text-muted">Author:{{allpost.6.author}}</p>
+          <div class="mb-1 text-muted">{{allpost.6.timestamp}}</div>
+          <p class="card-text mb-auto">{{allpost.6.content|truncatechars:300}}
+          </p>
+          <a href="/blog" class="stretched-link">Continue reading</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock%}

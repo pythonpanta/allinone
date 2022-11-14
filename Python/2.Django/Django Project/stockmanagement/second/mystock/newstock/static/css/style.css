@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+table {
+  cursor: pointer;
+}
+td > a {
+  color: red;
+  text-decoration: none;
+}
+.mycon {
+  width: 100vw;
+  overflow-x: scroll;
+}

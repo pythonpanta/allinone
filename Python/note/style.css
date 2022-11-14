@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trispace', sans-serif;
+    scroll-behavior: smooth; 
+}
+.container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+padding: 0 15px;
+}
+h1{
+    text-align: center;
+    margin:30px 0;   
+}
+#seta,#setb{
+    padding: 20px 0;
+    background: #F2F3F2;
+    color: #272822;
+}
+.toolbar-item button span{
+    cursor: pointer;
+    color: #fff;
+    padding:5px 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.set {
+    margin: 0 20px;
+}
+header{
+    background: #272822;
+    padding: 1vw 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.task{
+    padding: 15px;
+    width: 55%;
+}
+@media(max-width:900px){
+    body{
+       font-size: 70%;
+    }
+    a{
+        font-size: 15px;
+        /* font-weight: 500; */
+        display: inline-block;
+        
+    }
+    .set{
+        margin: 10px 10px;
+    }
+    header{
+        flex-direction: column;
+    }
+    .task{
+        padding: 5px;
+        width: 100%;
+    }
+    h1{
+        font-size: 15px
+    }
+}

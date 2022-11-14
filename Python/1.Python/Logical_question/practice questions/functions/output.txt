@@ -1,0 +1,4 @@
+APPLE
+BALL
+CAT
+DOG

@@ -1,0 +1,37 @@
+http://127.0.0.1:8000/district/list/?data=1     provision
+http://127.0.0.1:8000/province/list/
+http://127.0.0.1:8000/municipality/list/      http://127.0.0.1:8000/municipality/list/?data=3&data1=2   provision and district
+http://127.0.0.1:8000/category/list/
+http://127.0.0.1:8000/sub/product/list/       http://127.0.0.1:8000/sub/product/list/?data=2    category_id
+http://127.0.0.1:8000/product/list/
+
+
+
+http://127.0.0.1:8000/user/register/
+http://127.0.0.1:8000/login/
+
+
+
+
+{
+  "firstname":"amrit",
+  "lastname":"panta",
+  "username":"amrit",
+  "password":"nepal123",
+"email":"rajesh3@gmail.com",
+"date_of_birth":"2040-2-1",
+"gender":"male",
+"phone":"9860895560",
+"toll":"balkot",
+"pan":"1234567377",
+"province":1,
+"district":1,
+"municipality":1,
+"product":[1,2]
+
+}
+
+
+
+
+

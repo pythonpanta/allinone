@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Chat app</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Chat Application</h1>
+    <textarea name="chat" id="chat-logo" cols="50" rows="15" class="form-control"></textarea>
+    <br>
+    <input type="text" id="chat-message" size="100" class="form-control" required>
+    <br>
+    <input type="button" value="SEND" id="chat-message-send" class="btn btn-danger">
+    <br>
+    </div>
+    <script>
+        var ws=new WebSocket('ws://127.0.0.01:8000/ws/sc/')
+        // when the connection is established 
+        ws.onopen=function(){
+            // console.log('web socket Connection')
+        }
+        // when server bata data aauxa taba yo function run hunxa 
+        ws.onmessage=function(event){
+            // console.log('message from server..........',event)
+            const data=JSON.parse(event.data)  //string to json object 
+            document.querySelector('#chat-logo').value+=(data.msg+'\n')
+            
+        }
+        // when error is come 
+        ws.onerror=function(event){
+            console.log('web socket error occurs...',event)
+        
+        }
+        // when the connection is closed 
+        ws.onclose=function(event){
+            console.log('web socket connection close........',event)
+        
+        }
+        document.getElementById('chat-message-send').onclick=function(event){
+            const messagedom=document.getElementById('chat-message');
+            const message=messagedom.value;
+            // sending message from clinet to server 
+            // console.log(typeof(message))
+            // we send the message in the form srting  so used srtingify function which change object to srting
+            ws.send(JSON.stringify({
+                'msg':message
+            }))
+            messagedom.value=''
+
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

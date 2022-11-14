@@ -1,0 +1,46 @@
+{% extends "user/base.html" %}
+{% block content %}
+ 
+<div class="adminpannel">
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg-2 col-md-6 col-sm-12 admin-left">
+          <div class="container">
+            <h4> <i class="fa fa-user-circle fa-spin mx-2  fa-2x" aria-hidden="true"></i>Admin Panel</h4>
+            <hr>
+            <div class="d-flex flex-column admin-list">
+            <a href="{% url 'DashBoard' %}"> <i class="fa fa-home mx-2 " aria-hidden="true"></i>Dashboard</a>
+            <a href="{% url 'Register' %}"> <i class="fa fa-user-plus mx-2 " aria-hidden="true"></i>Add Employee</a>
+            <a href="{% url 'Addphoto' %}"> <i class="fa fa-camera mx-2" aria-hidden="true"></i>Add Photos</a>
+            <a href="{% url 'Trainsystem' %}"> <i class="fa fa-train mx-2 active" aria-hidden="true"></i>Train System</a>
+            <a href="{% url 'Viewreport' %}"> <i class="fa fa-eye mx-2" aria-hidden="true"></i>View Report</a>
+            <a href="{% url 'Logout' %}"> <i class="fa fa-lock mx-2" aria-hidden="true"></i>Logout</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-10 col-md-6 col-sm-12 admin-right">
+<div class="container register-container">
+    <div class="container px-5">
+        <h4 class="my-5 active ">Train Model</h4>
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+          <strong>{{message}}</strong> 
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+        {% endfor %} {% endif %} 
+      </div>
+
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock content %}

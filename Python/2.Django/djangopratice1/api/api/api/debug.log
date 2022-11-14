@@ -1,0 +1,218 @@
+2022-07-15 17:04:19,126 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:04:19,126 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:09:00,021 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:09:00,022 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:09:25,310 INFO C:\college project\api\api\clg_api\views.py changed, reloading. 257 
+2022-07-15 17:09:26,082 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:09:28,001 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:09:28,001 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:09:53,620 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:09:54,302 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:09:56,219 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:09:56,817 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:01,888 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:03,288 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:07,930 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:10:07,930 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:10:39,635 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:40,215 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:47,547 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:48,211 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:51,232 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:51,963 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:53,879 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:54,530 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:10:57,304 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:10:57,926 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:11:01,821 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:11:01,821 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:11:01,906 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:11:01,907 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:12:07,414 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:12:08,222 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:12:10,167 INFO C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\rest_framework\authentication.py changed, reloading. 257 
+2022-07-15 17:12:10,786 INFO Watching for file changes with StatReloader 643 
+2022-07-15 17:12:13,619 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:12:13,619 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-15 17:12:13,672 WARNING Unauthorized: /product/create 225 
+2022-07-15 17:12:13,673 WARNING "POST /product/create HTTP/1.1" 401 58 179 
+2022-07-27 05:53:25,411 INFO Watching for file changes with StatReloader 643 
+2022-07-27 05:53:52,187 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-07-27 05:57:34,450 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 05:57:35,243 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 05:57:36,658 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-07-27 05:57:49,273 ERROR Category matching query does not exist. 473 
+Traceback (most recent call last):
+  File "C:\college project\api\api\clg_api\views.py", line 461, in get
+    user_category = Category.objects.get(id=category['category'])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.DoesNotExist(
+clg_api.models.Category.DoesNotExist: Category matching query does not exist.
+2022-07-27 05:57:49,293 WARNING Bad Request: /user/category/list 225 
+2022-07-27 05:57:49,293 WARNING "GET /user/category/list HTTP/1.1" 400 64 179 
+2022-07-27 06:13:22,183 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-07-27 06:13:56,147 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 06:13:58,476 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-07-27 06:14:03,540 INFO "GET /category/list HTTP/1.1" 200 309 179 
+2022-07-27 06:14:03,638 INFO "GET /province/list HTTP/1.1" 200 333 179 
+2022-07-27 06:56:20,851 INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2220 179 
+2022-07-27 06:56:21,717 INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2616 179 
+2022-07-27 06:56:21,718 INFO "GET /static/admin/css/login.css HTTP/1.1" 200 954 179 
+2022-07-27 06:56:21,719 INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3401 179 
+2022-07-27 06:56:21,725 INFO "GET /static/admin/css/base.css HTTP/1.1" 200 19513 179 
+2022-07-27 06:56:21,728 INFO "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545 179 
+2022-07-27 06:56:21,731 INFO "GET /static/admin/css/fonts.css HTTP/1.1" 200 423 179 
+2022-07-27 06:56:21,779 INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876 179 
+2022-07-27 06:56:21,780 INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692 179 
+2022-07-27 06:56:21,790 WARNING Not Found: /favicon.ico 225 
+2022-07-27 06:56:21,790 WARNING "GET /favicon.ico HTTP/1.1" 404 5382 179 
+2022-07-27 06:56:30,170 INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0 179 
+2022-07-27 06:56:30,257 INFO "GET /admin/ HTTP/1.1" 200 7834 179 
+2022-07-27 06:56:30,276 INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380 179 
+2022-07-27 06:56:30,296 INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380 179 
+2022-07-27 06:56:30,296 INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331 179 
+2022-07-27 06:56:30,319 INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184 179 
+2022-07-27 07:03:06,611 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:03:06,645 INFO "GET /static/admin/css/changelists.css HTTP/1.1" 200 6932 179 
+2022-07-27 07:03:06,655 INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347 179 
+2022-07-27 07:03:06,665 INFO "GET /static/admin/js/actions.js HTTP/1.1" 200 7872 179 
+2022-07-27 07:03:06,666 INFO "GET /static/admin/js/core.js HTTP/1.1" 200 5698 179 
+2022-07-27 07:03:06,669 INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 5984 179 
+2022-07-27 07:03:06,670 INFO "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902 179 
+2022-07-27 07:03:06,682 INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531 179 
+2022-07-27 07:03:06,706 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:03:06,709 INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580 179 
+2022-07-27 07:03:06,719 INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381 179 
+2022-07-27 07:03:06,755 INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331 179 
+2022-07-27 07:03:11,649 INFO "GET /admin/user/role/ HTTP/1.1" 200 9477 179 
+2022-07-27 07:03:11,843 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:03:14,076 INFO "GET /admin/user/role/3295934a130b4014a4820e13dba6edbc/change/ HTTP/1.1" 200 9330 179 
+2022-07-27 07:03:14,103 INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8835 179 
+2022-07-27 07:03:14,104 INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 492 179 
+2022-07-27 07:03:14,115 INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11097 179 
+2022-07-27 07:03:14,124 INFO "GET /static/admin/js/change_form.js HTTP/1.1" 200 606 179 
+2022-07-27 07:03:14,151 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:03:18,982 INFO "GET /admin/user/role/ HTTP/1.1" 200 9477 179 
+2022-07-27 07:03:20,918 INFO "GET /admin/user/role/579393c458fe4a93ac2ec8267fdc1a7a/change/ HTTP/1.1" 200 9329 179 
+2022-07-27 07:03:20,989 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:03:23,499 INFO "GET /admin/user/role/ HTTP/1.1" 200 9477 179 
+2022-07-27 07:03:25,221 INFO "GET /admin/user/role/a6d900bb099848acb22aad07625c03f6/change/ HTTP/1.1" 200 9331 179 
+2022-07-27 07:03:25,290 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:03:28,469 INFO "GET /admin/auth/group/ HTTP/1.1" 200 7984 179 
+2022-07-27 07:03:28,496 INFO "GET /static/admin/img/search.svg HTTP/1.1" 200 458 179 
+2022-07-27 07:03:28,674 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:20,495 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:07:20,559 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:22,378 INFO "GET /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/change/ HTTP/1.1" 200 28858 179 
+2022-07-27 07:07:22,408 INFO "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466 179 
+2022-07-27 07:07:22,412 INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19634 179 
+2022-07-27 07:07:22,428 INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392 179 
+2022-07-27 07:07:22,453 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:22,497 INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677 179 
+2022-07-27 07:07:22,498 INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086 179 
+2022-07-27 07:07:39,366 INFO "GET /admin/auth/group/add/?_to_field=id&_popup=1 HTTP/1.1" 200 8478 179 
+2022-07-27 07:07:39,399 INFO "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4360 179 
+2022-07-27 07:07:39,400 INFO "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12350 179 
+2022-07-27 07:07:39,571 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:39,607 INFO "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291 179 
+2022-07-27 07:07:47,119 INFO "POST /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/change/ HTTP/1.1" 200 29293 179 
+2022-07-27 07:07:47,183 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:51,178 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:07:51,249 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:07:53,145 INFO "GET /admin/user/user/f3a500b492a1476399452c8915428e61/change/ HTTP/1.1" 200 29030 179 
+2022-07-27 07:07:53,211 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:08:12,214 INFO "GET /admin/user/role/ HTTP/1.1" 200 9477 179 
+2022-07-27 07:08:12,282 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:08:14,266 INFO "GET /admin/user/role/a6d900bb099848acb22aad07625c03f6/change/ HTTP/1.1" 200 9331 179 
+2022-07-27 07:08:14,336 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:08:37,126 INFO "GET /district/list?data=3 HTTP/1.1" 200 484 179 
+2022-07-27 07:08:39,625 INFO "GET /municipality/list?data=3&data1=25 HTTP/1.1" 200 58 179 
+2022-07-27 07:08:42,592 INFO "GET /admin/user/user/ HTTP/1.1" 302 0 179 
+2022-07-27 07:08:42,609 INFO "GET /admin/login/?next=/admin/user/user/ HTTP/1.1" 200 2240 179 
+2022-07-27 07:08:47,392 INFO "POST /admin/login/?next=/admin/user/user/ HTTP/1.1" 302 0 179 
+2022-07-27 07:08:47,478 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:08:47,548 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:08:51,216 INFO "GET /admin/user/user/ddda1f12fc15444581c028654aaf872e/change/ HTTP/1.1" 200 28997 179 
+2022-07-27 07:08:51,291 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:08:55,598 INFO "GET /admin/clg_api/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 2915 179 
+2022-07-27 07:08:55,667 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:09:10,490 INFO "GET /admin/clg_api/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 2915 179 
+2022-07-27 07:09:10,562 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:09:13,632 INFO "POST /admin/clg_api/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 362 179 
+2022-07-27 07:09:13,652 INFO "GET /static/admin/js/popup_response.js HTTP/1.1" 200 551 179 
+2022-07-27 07:09:32,369 INFO "GET /admin/clg_api/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 2915 179 
+2022-07-27 07:09:32,438 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:09:52,804 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:09:52,874 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:09:59,705 INFO "GET /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/change/ HTTP/1.1" 200 28910 179 
+2022-07-27 07:09:59,778 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:10:16,734 INFO "GET /category/list HTTP/1.1" 200 374 179 
+2022-07-27 07:10:16,735 INFO "GET /province/list HTTP/1.1" 200 333 179 
+2022-07-27 07:10:26,004 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 07:10:30,414 ERROR Category matching query does not exist. 473 
+Traceback (most recent call last):
+  File "C:\college project\api\api\clg_api\views.py", line 461, in get
+    user_category = Category.objects.get(id=category['category'])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.DoesNotExist(
+clg_api.models.Category.DoesNotExist: Category matching query does not exist.
+2022-07-27 07:10:30,416 WARNING Bad Request: /user/category/list 225 
+2022-07-27 07:10:30,416 WARNING "GET /user/category/list HTTP/1.1" 400 64 179 
+2022-07-27 07:11:21,554 INFO "GET /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/delete/ HTTP/1.1" 302 0 179 
+2022-07-27 07:11:21,569 INFO "GET /admin/login/?next=/admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/delete/ HTTP/1.1" 200 2320 179 
+2022-07-27 07:11:25,974 INFO "POST /admin/login/?next=/admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/delete/ HTTP/1.1" 302 0 179 
+2022-07-27 07:11:26,090 INFO "GET /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/delete/ HTTP/1.1" 200 7301 179 
+2022-07-27 07:11:26,119 INFO "GET /static/admin/js/cancel.js HTTP/1.1" 200 884 179 
+2022-07-27 07:11:34,730 INFO "GET /admin/login/?next=/admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/delete/ HTTP/1.1" 302 0 179 
+2022-07-27 07:11:34,796 INFO "GET /admin/ HTTP/1.1" 200 8138 179 
+2022-07-27 07:11:37,352 INFO "GET /admin/clg_api/category/6/change/ HTTP/1.1" 200 8657 179 
+2022-07-27 07:11:37,551 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:11:39,742 INFO "GET /admin/clg_api/category/6/delete/ HTTP/1.1" 200 7675 179 
+2022-07-27 07:11:41,224 INFO "POST /admin/clg_api/category/6/delete/ HTTP/1.1" 302 0 179 
+2022-07-27 07:11:41,424 INFO "GET /admin/clg_api/category/ HTTP/1.1" 200 9869 179 
+2022-07-27 07:11:41,497 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:11:41,525 INFO "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436 179 
+2022-07-27 07:11:44,743 INFO "GET /admin/user/role/ HTTP/1.1" 200 9477 179 
+2022-07-27 07:11:44,813 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:11:46,388 INFO "GET /admin/user/user/ HTTP/1.1" 200 11613 179 
+2022-07-27 07:11:46,457 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:11:48,665 INFO "GET /admin/user/user/ba7d387f38964f1fb62e1e5c5b3b3b6b/change/ HTTP/1.1" 200 28858 179 
+2022-07-27 07:11:48,740 INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343 179 
+2022-07-27 07:11:57,896 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 07:12:00,053 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-07-27 07:12:05,556 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-07-27 07:12:09,836 ERROR Category matching query does not exist. 473 
+Traceback (most recent call last):
+  File "C:\college project\api\api\clg_api\views.py", line 461, in get
+    user_category = Category.objects.get(id=category['category'])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.DoesNotExist(
+clg_api.models.Category.DoesNotExist: Category matching query does not exist.
+2022-07-27 07:12:09,837 WARNING Bad Request: /user/category/list 225 
+2022-07-27 07:12:09,838 WARNING "GET /user/category/list HTTP/1.1" 400 64 179 
+2022-07-27 07:12:23,298 INFO Watching for file changes with StatReloader 643 
+2022-07-27 07:12:30,671 ERROR Category matching query does not exist. 473 
+Traceback (most recent call last):
+  File "C:\college project\api\api\clg_api\views.py", line 461, in get
+    user_category = Category.objects.get(id=category['category'])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.DoesNotExist(
+clg_api.models.Category.DoesNotExist: Category matching query does not exist.
+2022-07-27 07:12:30,680 WARNING Bad Request: /user/category/list 225 
+2022-07-27 07:12:30,680 WARNING "GET /user/category/list HTTP/1.1" 400 64 179 
+2022-08-28 15:13:26,355 INFO Watching for file changes with StatReloader 643 
+2022-08-28 15:15:06,360 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-08-28 15:15:26,018 INFO "POST /login HTTP/1.1" 200 141 179 
+2022-08-28 15:15:28,349 INFO "GET /product/list HTTP/1.1" 200 146247 179 
+2022-08-28 15:15:42,543 INFO "POST /login HTTP/1.1" 200 134 179 
+2022-08-28 15:15:48,821 INFO "GET /user/category/list HTTP/1.1" 200 309 179 
+2022-09-23 21:23:24,138 INFO Watching for file changes with StatReloader 636 
+2022-10-05 08:15:40,154 INFO Watching for file changes with StatReloader 677 

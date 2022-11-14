@@ -1,0 +1,20 @@
+asgiref==3.3.4
+certifi==2020.12.5
+chardet==4.0.0
+Django==3.2.3
+django-ckeditor==6.0.0
+django-js-asset==1.2.2
+django-mptt==0.12.0
+django-unused-media==0.2.2
+gunicorn==20.1.0
+heroku==0.1.4
+idna==2.10
+# Pillow==8.2.0
+python-dateutil==1.5
+pytz==2021.1
+requests==2.25.1
+six==1.16.0
+sqlparse==0.4.1
+urllib3==1.26.5
+waitress==2.0.0
+whitenoise==5.2.0

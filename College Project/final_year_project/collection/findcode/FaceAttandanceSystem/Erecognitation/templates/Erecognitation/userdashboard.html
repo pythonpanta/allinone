@@ -1,0 +1,13 @@
+{% extends "user/base.html" %}
+{% load static %}
+{% block content %}
+<div class="userpannel">
+    <h1>Hello ,   <span style="color: #111;text-transform: capitalize;">{{user}}</span> </h1>
+    <p class="text-light">if you want to see the Attandance details you can click on below link</p>
+    <a href="{% url  'Changepassword' %}" class="text-info mt-5">Change Password</a>
+    <a href="{% url  'View_Attendance' %}" class="mybtn mt-5">View My Attandance</a>
+    <a href="{% url  'Logout' %}" class=" mt-5 logoutbtn"><i class="fa fa-arrow-left fw-bold text-light fs-5" aria-hidden="true"></i></a>
+  </div>
+
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 50px;
+    background: #fff;
+}
+.header-logo img{
+    width: 80px;
+    object-fit: contain;
+
+}
+.header-link{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    padding: 10px;
+    transition:.9s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header-link:hover{
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+@media only screen and (max-width: 480px) {
+    .header{
+        justify-content: space-around;
+        padding: 0;
+    
+    }
+.header-logo img{
+    width: 50px;
+}
+
+.header-link{
+    font-size: 1rem;
+    padding-left:0;
+}
+  }

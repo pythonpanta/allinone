@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* global style  */
+a{
+    text-decoration: none;
+    color: #111;
+}
+.active{
+    color: #111;
+}
+
+.mybtn{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    outline: none;
+    border: 1px solid #111;
+    display: inline-block;
+    transition: .3s ease-out;
+
+}
+.mybtn:hover{
+    background:#000;
+    color: #fff;
+}
+/* home page  */
+.home{
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("/static/user/image/banner6.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+
+}
+.login{
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("/static/user/image/banner.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.admin-left{
+    background: #3a1c71;
+    height: 100vh;
+    color: #fff;
+    padding-top: 50px;
+}
+.admin-list a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: .3s ease-out;
+}
+.admin-list a:hover{
+    color: #111;
+}
+.totalemployee{
+    background: #0D1317;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;color: #fff;
+    box-shadow: 2px 5px 10px red;
+    
+}
+.presentemployee{
+    background: #0D1317;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;color: #fff;
+    box-shadow: 2px 5px 10px red;
+    
+}
+ /* change password part  */
+.changepassword{
+background: #C4D4E6;
+    height: 100vh;
+    width: 100vw;
+    color: #111; 
+
+
+}
+
+.userpannel{
+    background:linear-gradient(#062E85, rgba(0,0,255,0.4));
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+/* inputfield  */
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0px 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 0px 1px #dadada inset, 0px 0px 0px 5px transparent;
+    box-shadow: 0px 0px 0px 1px #dadada inset, 0px 0px 0px 5px transparent;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+
+  }
+.input::placeholder{
+    color: #111;
+}
+  
+.input:focus {
+    -webkit-box-shadow: 0px 0px 0px 1px #5551 inset, 0px 0px 0px 0px #5551;
+    box-shadow: 0px 0px 0px 1px #111 inset, 0px 0px 0px 0px #111;
+  
+  }
+
+
+.logincontainer{
+    width: 600px;
+    background: #FEFEFE;
+    padding: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 10px 20px 10px #1118;
+}
+.logoutbtn{
+    position: fixed;
+    top: -30px;
+    right: 5px;
+}
+@media only screen and (max-width: 500px) {}

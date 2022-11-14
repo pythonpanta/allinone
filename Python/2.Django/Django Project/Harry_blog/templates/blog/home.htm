@@ -1,0 +1,52 @@
+{%  extends 'base.htm'%}
+{% block title %}blog|home.com{% endblock%}
+{% block blog %}active{% endblock %}
+{% block body %}
+<div class="container-fluid px-3 my-1">
+    <h2 class="text-primary">Our Top Articles</h2>
+    <div class="row">
+        <div class="col-sm-8">
+            {% for post in allpost%}
+
+            <div class="row ">
+                <div class="col-sm-8">
+                    <strong class=" mb-0 text-primary">
+                        <h2>{{post.title}}</h2>
+                    </strong>
+                    <h5 class="mb-1 text-muted">Author:{{post.author}}</h5>
+                    <div class="mb-1 text-muted">{{post.timestamp}}</div>
+                    <p class="card-text mb-auto">{{post.content|safe|truncatechars:300}}</p>
+                    <a href="/blog/{{post.slug}}" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-4 my-5">
+                    <img src="/media/{{post.img}}" alt="..." class="card-img">
+
+
+
+                </div>
+            </div>
+            <hr class="border-bottom border-warning">
+            {% endfor%}
+            <div class="text-center">
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-3x i_color mr-3"></i></a>
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook fa-3x i_color mr-3"></i></a>
+                <a href="https://mail.google.com/" target="_blank"><i class="fab fa-dribbble fa-3x i_color mr-3"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-3x i_color mr-3"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-3x i_color mr-3"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-3x i_color mr-3"></i></a>
+        
+            </div>
+
+
+        </div>
+        <div class="col-sm-4 my-3">
+           
+        </div>
+  
+    </div>
+
+</div>
+
+
+
+{% endblock %}

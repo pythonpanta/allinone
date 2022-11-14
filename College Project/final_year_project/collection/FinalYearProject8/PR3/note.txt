@@ -1,0 +1,40 @@
+virtualenv name=lastfinal
+pip install opencv-contrib-python
+pip install opencv-contrib-python
+
+
+
+
+I fixed this issue by installing: sudo pip install opencv-contrib-python.
+
+Then look for correct format.
+
+python2 is default
+
+Basically the problem is that python3 and python2 have different format of code.
+
+recognizer = cv2.face.LBPHFaceRecognizer_create()
+
+This is the format of python2.
+
+recognizer = cv2.face.createLBPHFaceRecognizer()
+
+This is the format of python3
+
+
+
+
+0
+
+If you are using python3 use pip3 instead of pip: pip3 install opencv-contrib-python
+
+Then you can simply do: recognizer = cv2.face.LBPHFaceRecognizer_create()
+
+
+
+
+pip install opencv-contrib-python --upgrade
+if gives error then write
+
+pip install opencv-contrib-python --user
+it will work fine for cv2.face.LBPHFaceRecognizer_create()

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Tik Tac Toe Game</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <h3>Real Time Tik Tac Toe Game</h3>
+    <div class="container">
+        <div class="div" id="0"></div>
+        <div class="div" id="1"></div>
+        <div class="div" id="2"></div>
+        <div class="div" id="3"></div>
+        <div class="div" id="4"></div>
+        <div class="div" id="5"></div>
+        <div class="div" id="6"></div>
+        <div class="div" id="7"></div>
+        <div class="div" id="8"></div>
+      
+    </div>
+    <button class="btn" onclick="reset()">Clear ALL</button>
+    <script>
+        var ws=new WebSocket('ws://127.0.0.1:8000/ws/')
+        ws.onopen=function(e){
+          console.log('connecting....')
+        }
+        ws.onmessage=function(e){
+       
+        }
+        ws.onclose=function(e){
+            console.log('connection close')
+       
+        }
+        function reset(){
+            for(i=0;i<divdom.length;i++){
+        divdom[i].textContent=''
+    }
+   }
+        const divdom =document.getElementsByClassName('div');
+        var user='X'
+   for(i=0;i<divdom.length;i++){
+    divdom[i].addEventListener('click',function(e){
+        num=parseInt(e.composedPath()[0].id)
+       ws.send(JSON.stringify({value:num,user:user}))
+    //    ws.send(JSON.stringify(`${mydata}:${user}`))
+        e.composedPath()[0].textContent=user
+       user= user=='X' ? '0':'X';
+
+    })
+   }
+   
+    </script>
+</body>
+</html>

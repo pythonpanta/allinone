@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Django Cookies</title>
+</head>
+<body>
+    <div class="container">
+    <h2 class="text-center mt-5 ">Django Cookie</h2>
+
+
+    <div class=" my-5">
+        <ul>
+            <li>A cookie is a small piece of information which is stored in the client browser. </li>
+            <li>It is used to store user's data in a file permanently (or for the specified time).</li>
+            <li> Cookie has its expiry date and time and removes automatically when gets expire.</li>
+            <li> Django provides built-in methods to set and fetch cookie.</li>
+            <li>The set_cookie() method is used to set a cookie and get() method is used to get the cookie.</li>
+            <li>  The request.COOKIES['key'] array can also be used to get cookie values.</li>
+        </ul>
+        
+
+        
+        <div class="container">
+            <h5 class="my-5">Let's Do Example 😎😎</h5>
+            <p>Enter word to store as a cookie in your browser.</p>
+            <form action="{% url 'setcookie' %}">
+                <input type="text" class="form-control w-50" placeholder="enter any word" name="userinput" required>
+     
+                <button class="btn btn-outline-danger my-4">Set Cookie</button>
+                <a href="{% url 'getcookie' %}" class="btn btn-outline-danger my-4">Get Cookie</a>
+                <a href="{% url 'deletecookie' %}" class="btn btn-outline-danger my-4">Delete Cookie</a>
+            
+            
+                
+            </form>
+
+          
+       
+        </div>
+       
+        
+        
+        
+      </div>
+
+    </div>
+</body>
+</html>

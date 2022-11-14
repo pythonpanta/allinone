@@ -1,0 +1,21 @@
+.contact-top {
+    width: 100vw;
+    height: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url('../../public/collection/contact.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.contact-top h3{
+text-align: center;
+display: inline-block;
+margin-top: 80px;
+margin-left: 180px;
+color: #fff;
+font-size: 35px;
+letter-spacing: 2px;
+text-shadow: 10px 15px 20px #ffffff;
+opacity: .8;
+   
+}

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href='{% static "user/image/logo.png"%}' />
+    <link rel="stylesheet" href='{% static "user/css/bootstrap.css"%}' />
+    <link rel="stylesheet" href='{% static "user/css/fontawesome.css"%}' />
+    <link rel="stylesheet" href='{% static "user/css/mystyle.css"%}' />
+    <title>Face Based Attandance System</title>
+  </head>
+  <body>
+    
+    {% block content %} {% endblock content %}
+
+    <script src='{% static "user/js/bootstrap.js"%}'></script>
+    <script src='{% static "user/js/fontawesome.js"%}'></script>
+  </body>
+</html>

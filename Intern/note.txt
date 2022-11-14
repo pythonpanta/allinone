@@ -1,0 +1,176 @@
+PostgreSQL is a powerful, open source object-relational database system with over 
+35 years of active development that has earned it a strong reputation for reliability,
+ feature robustness, and performance.
+
+
+
+How to run the postgre server 
+
+First, you need to find the PostgreSQL database directory, it can be something like
+ C:\Program Files\PostgreSQL\10.4\data. Then open Command Prompt and execute this command:
+
+pg_ctl -D "C:\Program Files\PostgreSQL\14\data" start
+
+
+To stop the server
+pg_ctl -D "C:\Program Files\PostgreSQL\14\data" stop
+
+
+To restart the server:
+pg_ctl -D "C:\Program Files\PostgreSQL\14\data" restart
+
+
+
+another way to start the server 
+
+
+
+Open Run Window by Winkey + R
+Type services.msc
+Search Postgres service based on version installed.
+Click stop, start or restart the service option.
+
+
+
+
+  ppostgresql command 
+
+  
+CREATE DATABASE student
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Nepali_Nepal.utf8'
+    LC_CTYPE = 'Nepali_Nepal.utf8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+
+Docker.......
+
+
+peocess to install docker in Window
+
+follow the below link  
+https://docs.docker.com/desktop/install/windows-install/
+
+1.install Download Docker Desktop for Windows
+2.you need more dependinces
+2.1 Download the Linux kernel update package thnrought the following link in 
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+WSL2 Linux kernel update package for x64 machines
+and install the it VLss
+3,finally run the Docker Desktop app in run as adminstration 
+and start the docker 
+
+
+to test whether docker is install or not
+>docker
+>docker --version
+
+let take an immage and convert it into the container
+>docker run any_image_name
+
+to make the container you need to the docker image if not you  can pull it from the docker hub. in this time we pull it from docker hub(it is online repository of online image)
+>docker run hello-world
+
+note:if system doesnot have any image it will download it from the docker hub
+
+to see the docker image in the system
+>docker images
+
+
+
+
+
+# buliding the dockercontainer from images from dockerfile
+
+search docker hub
+
+
+
+important command for the docker 
+1.docker pull ubuntu
+2.docker images
+3.docker run -it --name ubuntu_container ubuntu:latest (for converting the iamges into the container)
+4.docker run -it --name ubuntu_container ubuntu:latest
+5.docker run -it --name ubuntu_container write_image_id
+6.docker container rm mypostgres
+7.docker container ls -a
+8.docker container ls
+9.docker start pg(name)
+10.docker stop mypostgres
+11.docker run --name mypostgres -p 5432:5432 -e POSTGRES_PASSWORD=mypassword -d mcs07/postgres-rdkit
+12.docker rm -f mypostgres
+
+13.docker start ubuntu_os
+docker exec -it ubuntu_os bash
+14.docker rm 25ba0447d021
+15.docker start pg
+16.docker container stop pg
+
+docker compose up
+ psql -U postgres
+ postgres=# create table users (name varchar);
+ \dt
+
+
+
+ docker inspect pg_test
+docker rm -f pg_test
+
+docker run --name pg_test -p 5431:5431 -d -e POSTGRES_PASSWORD=mypassword -e POSTGRES_USER=amrit -e POSTGRES_DB=amrit_db -e PGPORT=5431 -d postgres
+
+
+docker exec -it pg_test bash
+docker compose up
+
+docker pull postgres
+docker run --name postgres-example -d -p 2022:5432 -e POSTGRES_PASSWORD=postgres postgres 
+
+https://docs.docker.com/compose/compose-file/compose-file-v3/
+https://docs.docker.com/compose/gettingstarted/
+https://www.rdkit.org/docs/Cartridge.html
+
+
+
+Run the following command to remove Docker container:
+docker stop <Container_ID>
+docker rm <Container_ID>
+
+Where Container_ID is the Docker container ID.
+Optional: Run the following command to remove the container forcefully:
+docker rm -f < Container_ID>
+Run the following command to remove the Docker image:
+docker rmi -f <Image_name>
+
+
+
+docker run --name mypostgres -p 5432:5432 -e POSTGRES_PASSWORD=panta -d mcs07/postgres-rdkit
+
+
+
+
+
+Linux important command 
+0.apt-get update #for updating
+1.cd (go to root directory
+2.cd /home/phoenixnap/Desktop)
+3.pwd
+4.cd [path to directory]
+5.cd [path to directory] && ls
+6.exit
+7.ls
+8.sudo apt install python3-pip
+9.which python3
+python3
+10.cd - #move to previous directory
+cd  #Changing Back to the Home Directory
+11.cd X[Tab] #Autocomplete Directory Name
+12.
+13.
+14.
+15.
+

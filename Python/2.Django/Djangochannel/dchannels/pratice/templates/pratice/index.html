@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket</title>
+</head>
+<body>
+    <h1>Django channels</h1>
+    <script>
+        var ws=new WebSocket('ws://127.0.0.01:8000/ws/as/')
+        ws.onopen=function(){
+            console.log('web socket Connection')
+            ws.send('hi message from client to server')
+            
+        }
+        ws.onmessage=function(event){
+            console.log('message from server..........',event)
+            
+        }
+        ws.onerror=function(event){
+            ws.open('web socket error occurs...',event)
+        
+        }
+        ws.onclose=function(event){
+            ws.open('web socket connection close........',event)
+        
+        }
+        
+        
+    </script>
+</body>
+</html>

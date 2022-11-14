@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+{% load static%}
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  {% block mystyle%}
+  <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+  {% endblock mystyle%}
+
+  <title>{% block title%}{% endblock%}</title>
+  <style>
+    .btn {
+      outline: none;
+      border: none;
+    }
+
+    .myfooter {
+      background: #000;
+      color: #8a8a8a;
+      font-size: 14px;
+      padding: 20px 0 10px;
+      margin-top: 20px;
+
+    }
+
+    .mybox {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .myfooter p {
+      color: #8a8a8a;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .myfooter h3 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4 {
+      min-width: 250px;
+      margin-bottom: 20px;
+
+    }
+
+    .col-1 {
+      flex-basis: 40%;
+    }
+
+    .col-2 {
+      flex: 1;
+      text-align: center;
+    }
+
+    .col-2 img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .col-3 {
+      flex-basis: 12%;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .applogo {
+      margin-top: 20px;
+    }
+
+    .applogo img {
+      width: 140px;
+    }
+
+    .myfooter hr {
+      border: none;
+      background: #b5b5b5;
+      height: 1px;
+      margin: 20px 0;
+    }
+
+    .copyright {
+      text-align: center;
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Myblock</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item {% block home%}{% endblock%}">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item {% block about%}{% endblock%}">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item {% block contact%}{% endblock%}">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item {% block blog %}{% endblock %}">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+
+
+      </ul>
+      <div class="ml-auto ">
+        <form method="GET" action="/search" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="query"
+            name="query">
+          <button class="btn btn-success my-2 my-sm-0 mr-2" type="submit">Search</button>
+          {% if user.is_authenticated %}
+          <ul class="navbar-nav mr-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                WelCome {{request.user}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/logout">LogOut</a>
+
+              </div>
+            </li>
+          </ul>
+          <!-- you are login as {{request.user}} -->
+          {% else %}
+          <button type="button" class="btn btn-success my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#loginmodel">
+            Login
+
+            <button type="button" class="btn btn-success my-2 my-sm-0 mr-2" data-toggle="modal"
+              data-target="#signupmodel">
+              Sign up
+            </button>
+            {% endif%}
+
+        </form>
+      </div>
+    </div>
+  </nav>
+  {% if messages %}
+  {% for message in messages%}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>Message!</strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor%}
+  {% endif %}
+
+  <!-- signUp Modal -->
+  <div class="modal fade" id="signupmodel" tabindex="-1" aria-labelledby="signupmodel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupmodel-title">Sign Up Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action='/signup' method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+            </div>
+            <div class="form-group">
+              <label for="fname">first name</label>
+              <input type="text" class="form-control" id="fname" name="fname" placeholder="first name" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">last name</label>
+              <input type="text" class="form-control" id="lname" name="lname" placeholder="last name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="pass1">Password</label>
+              <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter the password"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="pass2"> Conform-Password</label>
+              <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter the password"
+                required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginmodel" tabindex="-1" aria-labelledby="loginmodel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginmodel-title">LogIn Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/login">
+            {% csrf_token%}
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="username">
+            </div>
+
+            <div class="form-group">
+              <label for="pass"> Password</label>
+              <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter the password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% block body%}{% endblock%}
+  <!-- footer part -->
+  {% block fotter %}
+  <div class="myfooter">
+    <div class="mybox">
+      <div class="row">
+        <div class="col-1">
+          <h1>Download Our APP</h1>
+          <p>This app will definately helps to online transition</p>
+          <div class="applogo">
+            <img src="{% static 'app-store.png'%}" alt="">
+            <img src="{% static 'play-store.png'%}" alt="">
+          </div>
+
+        </div>
+        <div class="col-2">
+          <img src="{% static 'logo-paypal.png'%}" alt="">
+          <p>our purpose is to give you the benificial in online marketing</p>
+
+        </div>
+        <div class="col-3">
+          <h3>Useful Link</h3>
+          <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join affilite</li>
+          </ul>
+
+        </div>
+        <div class="col-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank">FaceBook</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+            <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+          </ul>
+
+
+        </div>
+      </div>
+      <hr>
+      <p class="copyright">Copyright 2020 Online shop</p>
+    </div>
+
+  </div>
+  {% endblock %}
+
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/all.min.js'%}"></script>
+  
+</body>
+
+</html>

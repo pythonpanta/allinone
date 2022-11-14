@@ -1,0 +1,67 @@
+{% extends 'base.htm'%}
+{% block title%}About.com{% endblock%}
+{% block about%}active{% endblock%}
+{% block body%}
+{% load static %}
+<main role="main">
+
+  <div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">About Us</h1>
+    <p>This is the small-family.We are joining here from all over the worlds with the different friends from school,college
+      and the other friends who want to share the knowledge and the experience.
+      currently we have the three Member <b>Amrit,Suman and Hasan</b> , but this family will be bigger and the bigger
+      as the time pass. 
+      so i will kindly request to all the memeber and the visitor to post the blog and share the knowledge you have
+      <br>
+      <b>Thank you</b>
+    </p>
+      <p><a class="btn btn-success btn-lg my-3" href="#" role="button">Learn more »</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h4 class="display-3 text-center">Our's Member</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'amrit1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Amrit</h5>
+            <p class="card-text">He is Computer Engineer. He is currently working on developing the website and other software along with the bachelor's degree.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'suman1.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Suman</h5>
+            <p class="card-text">He is doing bachelor in Physics and parallely research on quantum physics and the particles.on the other hand he is engaged in teaching fields also too.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'hasan.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Raja Hasan</h5>
+            <p class="card-text">He is Civil engineer and the gyms trainer. He is currently working on giving the fitness training along with the bachelor's degree.</p>
+            <a href="#" class="btn btn-success">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
+
+</main>
+
+
+
+
+{% endblock%}
